@@ -1,0 +1,180 @@
+img
+{
+   border-width: 0px;
+}
+
+table, tr, td
+{
+   padding: 0px;
+   border-collapse: collapse;
+   vertical-align: top;
+}
+
+p
+{
+   font-family: arial;
+   font-size: 10pt;
+   line-height: 1.5em;
+   margin: 10px;
+}
+
+p a
+{
+   color: #000080;
+   font-weight: bold;
+   text-decoration: none;
+}
+
+p a:hover
+{
+   text-decoration: underline;
+}
+
+h1
+{
+   font-family: arial;
+   font-size: 10pt;
+   font-weight: bold;
+   color: #000080;
+   line-height: 1.5em;
+   margin: 10px;
+}
+
+.mainTable
+{
+   width: 950px;
+   margin: 10px auto auto auto;
+}
+
+.logo
+{
+   background: #FFFFFF url("../images/logo.jpg") no-repeat;
+   width: 950px;
+   height: 147px;
+}
+
+.logo a
+{
+   width: 950px;
+   height: 147px;
+   display: block;
+}
+
+.nav, .navExt
+{
+   margin-top: 10px;
+}
+
+.nav td, .navExt td
+{
+   padding: 1px 0px 1px 0px;
+}
+
+.nav a
+{
+   font-family: arial;
+   font-size: 10pt;
+   font-weight: bold;
+   text-decoration: none;
+   color: #FFFFFF;
+   background-color: #000000;
+   padding: 10px 0px 0px 10px;
+   width: 100px;
+   height: 26px;
+   display: block;
+}
+
+.nav a:hover
+{
+   background-color: #000080;
+}
+
+.navExt div
+{
+   width: 10px;
+   height: 36px;
+}
+
+.content
+{
+   padding-top: 10px;
+}
+
+.contentBorder
+{
+   border: 1px solid #000080;
+   background-color: #e0e0e0;
+}
+
+.footer table
+{
+   width: 100%;
+}
+
+.footer td
+{
+   width: 50%;
+}
+
+.footer p
+{
+   color: #808080;
+   font-size: 8pt;
+}
+
+.footer b
+{
+   color: #000000;
+}
+
+.contact
+{
+   text-align: right;
+}
+
+.calculator, .acrodef
+{
+   margin: 0px 10px 10px 0px;
+}
+
+.calculator td
+{
+   font-family: arial;
+   font-size: 10pt;
+   font-weight: bold;
+   padding: 10px 0px 0px 10px;
+   line-height: 1.5em;
+}
+
+.calculator h1, .acrodef h1
+{
+   font-family: arial;
+   font-size: 10pt;
+   font-weight: bold;
+   color: #000080;
+   margin: 0px;
+}
+
+.inputtext
+{
+   width: 90px;
+}
+
+.result
+{
+   color: #000080;
+}
+
+.acrodef
+{
+   border-left: 1px solid #808080;
+   width: 400px;
+}
+
+.acrodef td
+{
+   font-family: arial;
+   font-size: 10pt;
+   padding: 10px 0px 0px 10px;
+   line-height: 1.5em;
+}

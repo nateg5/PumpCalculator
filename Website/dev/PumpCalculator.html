@@ -1,0 +1,122 @@
+<html>
+	<head>
+		<title>Pump Calculator</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function calculate()
+			{
+				varHeight = (Number(document.getElementById("feet").value) * 12) + Number(document.getElementById("inches").value);
+				varWeight = Number(document.getElementById("weight").value);
+				varAge = Number(document.getElementById("age").value);
+				varActivity = Number(document.getElementById("activity").value);
+				varCarbs = Number(document.getElementById("carbs").value);
+				
+				varBMR = 0;
+				
+				if(document.getElementById("male").checked)
+				{
+					varBMR = 66 + ( 6.23 * varWeight ) + ( 12.7 * varHeight ) - ( 6.8 * varAge );
+				}
+				else
+				{
+					varBMR = 655 + ( 4.35 * varWeight ) + ( 4.7 * varHeight ) - ( 4.7 * varAge );
+				}
+				
+				varCalories = varBMR * varActivity;
+				
+				varCarbPercent = (varCarbs * 4) / varCalories;
+				
+				varTDD = ((varWeight / 4) / .5) * varCarbPercent;
+				
+				varCarbRatio = (varCarbs * 2) / varTDD;
+				
+				varCorrection = (varCarbRatio * 1800) / 500;
+				
+				varBasal = (varTDD / 2) / 24;
+				
+				document.getElementById("TDD").innerHTML = varTDD.toFixed(1) + " units";
+				document.getElementById("carb").innerHTML = "1 unit/" + varCarbRatio.toFixed(1) + " grams";
+				document.getElementById("correction").innerHTML = "1 unit/" + varCorrection.toFixed(1) + " mg/dl";
+				document.getElementById("basal").innerHTML = varBasal.toFixed(3) + " units/hour";
+				document.getElementById("bmr").innerHTML = varBMR.toFixed(0);
+				document.getElementById("calories").innerHTML = varCalories.toFixed(0);
+				document.getElementById("percent").innerHTML = (varCarbPercent * 100).toFixed(0) + "%";
+			}
+		</script>
+		<table>
+			<tr>
+				<td>Height</td>
+				<td><input type="text" id="feet">ft <input type="text" id="inches">in</td>
+			</tr>
+			<tr>
+				<td>Weight</td>
+				<td><input type="text" id="weight">lbs</td>
+			</tr>
+			<tr>
+				<td>Age</td>
+				<td><input type="text" id="age"></td>
+			</tr>
+			<tr>
+				<td><input type="radio" name="sex" id="male">Male</td>
+				<td><input type="radio" name="sex" id="female">Female</td>
+			</tr>
+			<tr>
+				<td>Hours of Exercise/Week</td>
+				<td>
+					<select id="activity">
+						<option value="1.2">0</option>
+						<option value="1.258">1</option>
+						<option value="1.317">2</option>
+						<option value="1.375">3</option>
+						<option value="1.433">4</option>
+						<option value="1.492">5</option>
+						<option value="1.55">6</option>
+						<option value="1.608">7</option>
+						<option value="1.667">8</option>
+						<option value="1.725">9</option>
+						<option value="1.783">10</option>
+						<option value="1.842">11</option>
+						<option value="1.9">12</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Average carbs/day</td>
+				<td><input type="text" id="carbs">grams</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="button" value="Calculate" onclick="javascript:calculate()"></td>
+			</tr>
+			<tr>
+				<td>TDD</td>
+				<td id="TDD"></td>
+			</tr>
+			<tr>
+				<td>Carb Ratio</td>
+				<td id="carb"></td>
+			</tr>
+			<tr>
+				<td>Correction Ratio</td>
+				<td id="correction"></td>
+			</tr>
+			<tr>
+				<td>Basal Rate</td>
+				<td id="basal"></td>
+			</tr>
+			<tr>
+				<td>BMR</td>
+				<td id="bmr"></td>
+			</tr>
+			<tr>
+				<td>Calories Burned Per Day</td>
+				<td id="calories"></td>
+			</tr>
+			<tr>
+				<td>Percent of Calories from Carbs</td>
+				<td id="percent"></td>
+			</tr>
+		</table>
+	</body>
+</html>
